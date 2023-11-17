@@ -4,9 +4,11 @@ import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 import { AuthGuard } from './auth/auth.guard';
 import { HomeComponent } from './components/home/home.component';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
+  {path: 'cadastro', component: CadastroComponent},
   {path: '', component: NavComponent, canActivate: [AuthGuard], children: [
     {path: 'home', component: HomeComponent },
   ]},

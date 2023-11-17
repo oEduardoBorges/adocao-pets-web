@@ -6,6 +6,10 @@
     justify-content: center;
 }
 
+.fullWidth {
+    width: 100%;
+}
+
 .form {
     width: 30rem;
     margin: auto;
