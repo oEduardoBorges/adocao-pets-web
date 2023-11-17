@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgb(28, 42, 68) 0%, rgb(28, 42, 68) 100%);
+  }
+  
+.container img {
+    max-height: 80px; /* ou ajuste conforme necessário */
+    margin-right: 10px; /* ou ajuste conforme necessário */
+}
+
+.container h1 {
+    color: white;
+    margin-top: 1rem;
+    font-size: 3em;
+    margin: 0;
+    padding: 1rem 10%;
+    font-family: cursive;
+}
+
+
+  
