@@ -1,0 +1,24 @@
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <img src="assets/img/nav.svg" alt="Imagem de navegação">
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="">
+                <i class="material-icons">home</i>
+                <span>Página Inicial</span>
+            </a>
+            <div></div><a mat-list-item class="white-text">
+                <i class="material-icons">logout</i>
+                <span>Sair</span>
+            </a>
+        </mat-nav-list>
+    </mat-drawer>
+  
+    <div class="sidenav-content">
+      <button class="menu mat-elevation-z8" (click)="drawer.toggle()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <router-outlet></router-outlet>
+    </div>
+  
+  </mat-drawer-container>
+  
