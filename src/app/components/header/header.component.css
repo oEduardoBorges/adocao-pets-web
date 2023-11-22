@@ -1,13 +1,13 @@
 .container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgb(28, 42, 68) 0%, rgb(28, 42, 68) 100%);
-  }
-  
+    justify-content: start;
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgb(28, 42, 68) 0%, rgb(28, 42, 68) 100%);
+}
+
 .container img {
-    max-height: 80px; /* ou ajuste conforme necessário */
-    margin-right: 10px; /* ou ajuste conforme necessário */
+    max-height: 80px;
+    margin-right: 10px;
 }
 
 .container h1 {
@@ -17,7 +17,20 @@
     margin: 0;
     padding: 1rem 10%;
     font-family: cursive;
+    margin-right: 10px; /* Ajuste conforme necessário */
 }
 
+.title-group a {
+    text-decoration: none;
+    display: flex;
+    color: white;
+}
 
-  
+.title-group, h3 {
+    margin: 0;
+    color: white;
+}
+
+.title-group {
+    margin-right: 18%; /* Ajuste conforme necessário */
+}
