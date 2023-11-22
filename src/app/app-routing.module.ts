@@ -5,12 +5,16 @@ import { NavComponent } from './components/nav/nav.component';
 import { AuthGuard } from './auth/auth.guard';
 import { HomeComponent } from './components/home/home.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { AbrigoComponent } from './components/abrigo/abrigo.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'cadastro', component: CadastroComponent},
+
   {path: '', component: NavComponent, canActivate: [AuthGuard], children: [
     {path: 'home', component: HomeComponent },
+
+    {path: 'abrigos', component: AbrigoComponent }
   ]},
 ];
 
