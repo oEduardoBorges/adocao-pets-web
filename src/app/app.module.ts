@@ -31,7 +31,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
-import { AbrigoComponent } from './components/abrigo/abrigo.component';
+import { AbrigoComponent } from './components/abrigo/abrigo-list/abrigo.component';
 
 
 @NgModule({
