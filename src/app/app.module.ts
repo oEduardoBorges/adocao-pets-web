@@ -32,6 +32,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { AbrigoComponent } from './components/abrigo/abrigo-list/abrigo.component';
+import { AbrigoUpdateComponent } from './abrigo/abrigo-update/abrigo-update.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { AbrigoComponent } from './components/abrigo/abrigo-list/abrigo.componen
     HeaderComponent,
     HomeComponent,
     CadastroComponent,
-    AbrigoComponent
+    AbrigoComponent,
+    AbrigoUpdateComponent
   ],
   imports: [
     BrowserModule,
