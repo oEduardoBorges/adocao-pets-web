@@ -16,7 +16,11 @@ export class AbrigoService {
     return this.http.get<Page<Abrigo>>(`${environment.apiUrl}/abrigos?page=${page ?? 0}&size=${size ?? 10}`);
   }
 
-  buscarPorId(id: string): Observable<Abrigo> {
+  buscarPorId(id: any): Observable<Abrigo> {
     return this.http.get<Abrigo>(`${environment.apiUrl}/abrigos/${id}`);
+  }
+
+  atualizar(abrigo: Abrigo): Observable<Abrigo> {
+    return this.http.put<Abrigo>(`${environment.apiUrl}/abrigos/${abrigo.id}`, abrigo);
   }
 }
