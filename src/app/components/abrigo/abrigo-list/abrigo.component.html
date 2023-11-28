@@ -2,6 +2,11 @@
 
     <h1>Lista de Abrigos</h1>
 
+    <mat-form-field>
+      <mat-label>Filtro</mat-label>
+      <input matInput (keyup)="applyFilter($event)">
+    </mat-form-field>
+
     <div class="mat-elevation-z8">
         <table mat-table [dataSource]="dataSource">
       

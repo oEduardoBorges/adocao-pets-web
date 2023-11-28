@@ -50,4 +50,8 @@ export class AbrigoComponent implements OnInit {
     return `${codigoArea} ${parte1}-${parte2}`;
   }
 
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 }
