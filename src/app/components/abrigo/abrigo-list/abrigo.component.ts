@@ -1,3 +1,4 @@
+import { AuthService } from './../../../services/auth.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
@@ -13,6 +14,9 @@ import { HeaderService } from '../../../services/header.service';
 })
 export class AbrigoComponent implements OnInit {
 
+  admin = false;
+  user = false;
+
   ELEMENT_DATA: Abrigo[] = [];
 
   displayedColumns: string[] = ['nome', 'telefone', 'email', 'acoes'];
@@ -20,10 +24,18 @@ export class AbrigoComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private abrigoService: AbrigoService, private headerService: HeaderService) {}
+  constructor(private abrigoService: AbrigoService, private headerService: HeaderService, private authService: AuthService) {}
 
   ngOnInit(): void {
     this.buscarTodos();
+
+    const userRole = this.authService.getRole();
+
+    if(userRole === 'ADMIN') {
+      this.admin = true;
+    } else if(userRole === 'USER') {
+      this.user = true;
+    }
   }
 
   buscarTodos(page?: number, size?: number) {
