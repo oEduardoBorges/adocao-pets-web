@@ -34,6 +34,7 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { AbrigoComponent } from './components/abrigo/abrigo-list/abrigo.component';
 import { AbrigoUpdateComponent } from './components/abrigo/abrigo-update/abrigo-update.component';
 import { AbrigoCreateComponent } from './components/abrigo/abrigo-create/abrigo-create.component';
+import { PetsListComponent } from './components/abrigo/pets/pets-list/pets-list.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { AbrigoCreateComponent } from './components/abrigo/abrigo-create/abrigo-
     CadastroComponent,
     AbrigoComponent,
     AbrigoUpdateComponent,
-    AbrigoCreateComponent
+    AbrigoCreateComponent,
+    PetsListComponent
   ],
   imports: [
     BrowserModule,

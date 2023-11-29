@@ -22,11 +22,13 @@ h1 {
     margin-bottom: 2rem;
 }
 
-.edit {
+.material-icons.edit {
+    margin-left: 20%;
     color: rgb(0, 155, 250);
 }
 
-.delete {
-    color: red;
+.material-icons.lists {
+    margin-left: 20%;
+    color: rgb(1, 1, 27);
 }
   

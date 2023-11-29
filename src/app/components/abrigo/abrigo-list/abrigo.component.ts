@@ -19,7 +19,7 @@ export class AbrigoComponent implements OnInit {
 
   ELEMENT_DATA: Abrigo[] = [];
 
-  displayedColumns: string[] = ['nome', 'telefone', 'email', 'acoes'];
+  displayedColumns: string[] = ['nome', 'telefone', 'email', 'acoes', 'pets'];
   dataSource = new MatTableDataSource<Abrigo>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
