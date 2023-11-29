@@ -38,6 +38,17 @@ export class AuthService {
     return false;
   }
 
+  getRole(): string {
+    const token = localStorage.getItem('token');
+    if(token) {
+      const payload = token.split('.')[1];
+      const decodePayLoad = atob(payload);
+      const payloadObj = JSON.parse(decodePayLoad);
+      return payloadObj.role;
+    }
+    return '';
+  }
+
   logout() {
     localStorage.clear();
   }

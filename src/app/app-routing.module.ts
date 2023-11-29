@@ -17,8 +17,8 @@ const routes: Routes = [
     {path: 'home', component: HomeComponent },
 
     {path: 'abrigos', component: AbrigoComponent },
-    {path: 'abrigos/cadastro', component: AbrigoCreateComponent },
-    {path: 'abrigos/atualizar/:id', component: AbrigoUpdateComponent }
+    {path: 'abrigos/cadastro', component: AbrigoCreateComponent, canActivate: [AuthGuard], data: { allowedRoles: ['ADMIN'] } },
+    {path: 'abrigos/atualizar/:id', component: AbrigoUpdateComponent, canActivate: [AuthGuard], data: { allowedRoles: ['ADMIN'] } },
   ]},
 ];
 

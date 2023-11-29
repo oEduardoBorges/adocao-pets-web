@@ -12,6 +12,10 @@ export class AbrigoService {
 
   constructor(private http: HttpClient) { }
 
+  cadastrar(abrigo: Abrigo): Observable<Abrigo> {
+    return this.http.post<Abrigo>(`${environment.apiUrl}/abrigos`, abrigo);
+  }
+
   buscarTodos(page?: number, size?: number): Observable<Page<Abrigo>> {
     return this.http.get<Page<Abrigo>>(`${environment.apiUrl}/abrigos?page=${page ?? 0}&size=${size ?? 10}`);
   }
