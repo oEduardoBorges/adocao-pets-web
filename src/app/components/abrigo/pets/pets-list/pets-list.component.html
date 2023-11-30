@@ -2,7 +2,7 @@
 
   <h1>Lista de Pets do Abrigo</h1>
 
-  <button routerLink="cadastro" class="mat-elevation-z8" mat-stroked-button color="primary">Cadastrar Pet</button>
+  <button *ngIf="!user" routerLink="cadastro" class="mat-elevation-z8" mat-stroked-button color="primary">Cadastrar Pet</button>
 
   <mat-form-field>
     <mat-label>Filtro</mat-label>

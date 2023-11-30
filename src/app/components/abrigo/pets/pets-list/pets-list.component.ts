@@ -5,6 +5,7 @@ import { AbrigoService } from '../../../../services/abrigo.service';
 import { Abrigo } from '../../../../models/abrigo';
 import { ActivatedRoute } from '@angular/router';
 import { Pets } from '../../../../models/pets';
+import { AuthService } from '../../../../services/auth.service';
 
 @Component({
   selector: 'app-pets-list',
@@ -12,6 +13,9 @@ import { Pets } from '../../../../models/pets';
   styleUrl: './pets-list.component.css'
 })
 export class PetsListComponent implements OnInit {
+
+  admin = false;
+  user = false;
 
   abrigo: Abrigo = {
     id:       '',
@@ -27,12 +31,20 @@ export class PetsListComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private abrigoService: AbrigoService, private route: ActivatedRoute) {}
+  constructor(private abrigoService: AbrigoService, private route: ActivatedRoute, private authService: AuthService) {}
 
   ngOnInit(): void {
     this.abrigo.id = this.route.snapshot.paramMap.get('id');
     this.buscarAbrigoPorId();
     this.listarPets();
+
+    const userRole = this.authService.getRole();
+
+    if(userRole === 'ADMIN') {
+      this.admin = true;
+    } else if(userRole === 'USER') {
+      this.user = true;
+    }
   }
 
   buscarAbrigoPorId(): void {
