@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Abrigo } from '../models/abrigo';
+import { Pets } from '../models/pets';
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +27,9 @@ export class AbrigoService {
 
   atualizar(abrigo: Abrigo): Observable<Abrigo> {
     return this.http.put<Abrigo>(`${environment.apiUrl}/abrigos/${abrigo.id}`, abrigo);
+  }
+
+  listarPets(idOuNome: String): Observable<Pets[]> {
+    return this.http.get<Pets[]>(`${environment.apiUrl}/abrigos/${idOuNome}/pets`);
   }
 }
