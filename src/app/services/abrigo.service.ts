@@ -32,4 +32,8 @@ export class AbrigoService {
   listarPets(idOuNome: String): Observable<Pets[]> {
     return this.http.get<Pets[]>(`${environment.apiUrl}/abrigos/${idOuNome}/pets`);
   }
+
+  cadastrarPets(idOuNome: String, pets: Pets): Observable<Pets> {
+    return this.http.post<Pets>(`${environment.apiUrl}/abrigos/${idOuNome}/pets`, pets);
+  }
 }
