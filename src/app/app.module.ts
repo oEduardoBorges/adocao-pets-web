@@ -36,6 +36,7 @@ import { AbrigoUpdateComponent } from './components/abrigo/abrigo-update/abrigo-
 import { AbrigoCreateComponent } from './components/abrigo/abrigo-create/abrigo-create.component';
 import { PetsListComponent } from './components/abrigo/pets/pets-list/pets-list.component';
 import { PetsCreateComponent } from './components/abrigo/pets/pets-create/pets-create.component';
+import { PetListComponent } from './components/pet/pets-list/pets-list.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { PetsCreateComponent } from './components/abrigo/pets/pets-create/pets-c
     AbrigoUpdateComponent,
     AbrigoCreateComponent,
     PetsListComponent,
-    PetsCreateComponent
+    PetsCreateComponent,
+    PetListComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,6 @@ mat-form-field {
 button {
     width: 100%;
     margin-bottom: 1rem;
-    margin-top: .5rem;
 }
 
 h1 {
@@ -31,5 +30,9 @@ h1 {
 .material-icons.lists {
     margin-left: 20%;
     color: rgb(1, 1, 27);
+}
+
+button {
+    margin-top: .5rem;
 }
   

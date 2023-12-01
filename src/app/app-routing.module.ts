@@ -10,6 +10,8 @@ import { AbrigoUpdateComponent } from './components/abrigo/abrigo-update/abrigo-
 import { AbrigoCreateComponent } from './components/abrigo/abrigo-create/abrigo-create.component';
 import { PetsListComponent } from './components/abrigo/pets/pets-list/pets-list.component';
 import { PetsCreateComponent } from './components/abrigo/pets/pets-create/pets-create.component';
+import { PetListComponent } from './components/pet/pets-list/pets-list.component';
+
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -19,10 +21,13 @@ const routes: Routes = [
     {path: 'home', component: HomeComponent },
 
     {path: 'abrigos', component: AbrigoComponent },
+    {path: 'abrigos/pets', component: PetListComponent},
     {path: 'abrigos/cadastro', component: AbrigoCreateComponent, canActivate: [AuthGuard], data: { allowedRoles: ['ADMIN'] } },
     {path: 'abrigos/atualizar/:id', component: AbrigoUpdateComponent, canActivate: [AuthGuard], data: { allowedRoles: ['ADMIN'] } },
     {path: 'abrigos/pets/:id', component: PetsListComponent},
     {path: 'abrigos/pets/:id/cadastro', component: PetsCreateComponent},
+
+    
   ]},
 ];
 
