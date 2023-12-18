@@ -11,6 +11,7 @@ import { AbrigoCreateComponent } from './components/abrigo/abrigo-create/abrigo-
 import { PetsListComponent } from './components/abrigo/pets/pets-list/pets-list.component';
 import { PetsCreateComponent } from './components/abrigo/pets/pets-create/pets-create.component';
 import { PetListComponent } from './components/pet/pets-list/pets-list.component';
+import { TutorListComponent } from './components/tutor/tutor-list/tutor-list.component';
 
 
 const routes: Routes = [
@@ -27,7 +28,7 @@ const routes: Routes = [
     {path: 'abrigos/pets/:id', component: PetsListComponent},
     {path: 'abrigos/pets/:id/cadastro', component: PetsCreateComponent},
 
-    
+    {path: 'tutores', component: TutorListComponent},
   ]},
 ];
 
