@@ -3,5 +3,6 @@ export interface Adocao {
     idPet: String;
     idTutor: String;
     motivo: String;
-    status?: String
+    status?: String;
+    justificativa?: String ;
 }

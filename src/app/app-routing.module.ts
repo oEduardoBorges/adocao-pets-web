@@ -17,6 +17,7 @@ import { TutorCreateComponent } from './components/tutor/tutor-create/tutor-crea
 import { AdocoesCreateComponent } from './components/adocoes/adocoes-create/adocoes-create.component';
 import { AdocoesListComponent } from './components/adocoes/adocoes-list/adocoes-list.component';
 import { AdocoesAprovarComponent } from './components/adocoes/adocoes-aprovar/adocoes-aprovar.component';
+import { AdocoesReprovarComponent } from './components/adocoes/adocoes-reprovar/adocoes-reprovar.component';
 
 
 const routes: Routes = [
@@ -40,6 +41,7 @@ const routes: Routes = [
     {path: 'adocoes', component: AdocoesListComponent},
     {path: 'adocoes/cadastro', component: AdocoesCreateComponent},
     {path: 'adocoes/aprovar', component: AdocoesAprovarComponent, canActivate: [AuthGuard], data: { allowedRoles: ['ADMIN'] } },
+    {path: 'adocoes/reprovar', component: AdocoesReprovarComponent, canActivate: [AuthGuard], data: { allowedRoles: ['ADMIN'] } }
 
   ]},
 ];

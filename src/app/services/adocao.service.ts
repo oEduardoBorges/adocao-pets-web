@@ -24,4 +24,7 @@ export class AdocaoService {
     return this.http.put<Adocao>(`${environment.apiUrl}/adocoes/aprovar`, adocao);
   }
 
+  reprovar(adocao: Adocao): Observable<Adocao> {
+    return this.http.put<Adocao>(`${environment.apiUrl}/adocoes/reprovar`, adocao);
+  }
 }
