@@ -1,0 +1,35 @@
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.material-icons.edit {
+    margin-left: 20%;
+    color: rgb(0, 155, 250);
+}
+
+.material-icons.lists {
+    margin-left: 20%;
+    color: rgb(1, 1, 27);
+}
+  

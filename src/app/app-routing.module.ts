@@ -15,6 +15,7 @@ import { TutorListComponent } from './components/tutor/tutor-list/tutor-list.com
 import { TutorUpdateComponent } from './components/tutor/tutor-update/tutor-update.component';
 import { TutorCreateComponent } from './components/tutor/tutor-create/tutor-create.component';
 import { AdocoesCreateComponent } from './components/adocoes/adocoes-create/adocoes-create.component';
+import { AdocoesListComponent } from './components/adocoes/adocoes-list/adocoes-list.component';
 
 
 const routes: Routes = [
@@ -35,6 +36,7 @@ const routes: Routes = [
     {path: 'tutores/cadastro', component: TutorCreateComponent, canActivate: [AuthGuard], data: { allowedRoles: ['ADMIN'] } },
     {path: 'tutores/atualizar/:id', component: TutorUpdateComponent, canActivate: [AuthGuard], data: { allowedRoles: ['ADMIN'] } },
 
+    {path: 'adocoes', component: AdocoesListComponent},
     {path: 'adocoes/cadastro', component: AdocoesCreateComponent},
   ]},
 ];
