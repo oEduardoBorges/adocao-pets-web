@@ -20,4 +20,8 @@ export class AdocaoService {
     return this.http.post<Adocao>(`${environment.apiUrl}/adocoes`, adocao);
   }
 
+  aprovar(adocao: Adocao): Observable<Adocao> {
+    return this.http.put<Adocao>(`${environment.apiUrl}/adocoes/aprovar`, adocao);
+  }
+
 }

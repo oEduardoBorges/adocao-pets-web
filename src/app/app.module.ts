@@ -42,6 +42,7 @@ import { TutorUpdateComponent } from './components/tutor/tutor-update/tutor-upda
 import { TutorCreateComponent } from './components/tutor/tutor-create/tutor-create.component';
 import { AdocoesCreateComponent } from './components/adocoes/adocoes-create/adocoes-create.component';
 import { AdocoesListComponent } from './components/adocoes/adocoes-list/adocoes-list.component';
+import { AdocoesAprovarComponent } from './components/adocoes/adocoes-aprovar/adocoes-aprovar.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { AdocoesListComponent } from './components/adocoes/adocoes-list/adocoes-
     TutorUpdateComponent,
     TutorCreateComponent,
     AdocoesCreateComponent,
-    AdocoesListComponent
+    AdocoesListComponent,
+    AdocoesAprovarComponent
   ],
   imports: [
     BrowserModule,
