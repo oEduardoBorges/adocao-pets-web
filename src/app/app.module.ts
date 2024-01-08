@@ -40,6 +40,7 @@ import { PetListComponent } from './components/pet/pets-list/pets-list.component
 import { TutorListComponent } from './components/tutor/tutor-list/tutor-list.component';
 import { TutorUpdateComponent } from './components/tutor/tutor-update/tutor-update.component';
 import { TutorCreateComponent } from './components/tutor/tutor-create/tutor-create.component';
+import { AdocoesCreateComponent } from './components/adocoes/adocoes-create/adocoes-create.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { TutorCreateComponent } from './components/tutor/tutor-create/tutor-crea
     PetListComponent,
     TutorListComponent,
     TutorUpdateComponent,
-    TutorCreateComponent
+    TutorCreateComponent,
+    AdocoesCreateComponent
   ],
   imports: [
     BrowserModule,
