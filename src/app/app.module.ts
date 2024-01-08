@@ -38,6 +38,8 @@ import { PetsListComponent } from './components/abrigo/pets/pets-list/pets-list.
 import { PetsCreateComponent } from './components/abrigo/pets/pets-create/pets-create.component';
 import { PetListComponent } from './components/pet/pets-list/pets-list.component';
 import { TutorListComponent } from './components/tutor/tutor-list/tutor-list.component';
+import { TutorUpdateComponent } from './components/tutor/tutor-update/tutor-update.component';
+import { TutorCreateComponent } from './components/tutor/tutor-create/tutor-create.component';
 
 
 @NgModule({
@@ -54,7 +56,9 @@ import { TutorListComponent } from './components/tutor/tutor-list/tutor-list.com
     PetsListComponent,
     PetsCreateComponent,
     PetListComponent,
-    TutorListComponent
+    TutorListComponent,
+    TutorUpdateComponent,
+    TutorCreateComponent
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,8 @@ import { PetsListComponent } from './components/abrigo/pets/pets-list/pets-list.
 import { PetsCreateComponent } from './components/abrigo/pets/pets-create/pets-create.component';
 import { PetListComponent } from './components/pet/pets-list/pets-list.component';
 import { TutorListComponent } from './components/tutor/tutor-list/tutor-list.component';
+import { TutorUpdateComponent } from './components/tutor/tutor-update/tutor-update.component';
+import { TutorCreateComponent } from './components/tutor/tutor-create/tutor-create.component';
 
 
 const routes: Routes = [
@@ -29,6 +31,8 @@ const routes: Routes = [
     {path: 'abrigos/pets/:id/cadastro', component: PetsCreateComponent},
 
     {path: 'tutores', component: TutorListComponent},
+    {path: 'tutores/cadastro', component: TutorCreateComponent, canActivate: [AuthGuard], data: { allowedRoles: ['ADMIN'] } },
+    {path: 'tutores/atualizar/:id', component: TutorUpdateComponent, canActivate: [AuthGuard], data: { allowedRoles: ['ADMIN'] } },
   ]},
 ];
 
